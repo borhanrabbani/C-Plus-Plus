@@ -1,0 +1,18 @@
+#include <string>
+#include <queue>
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    priority_queue<string> pq;
+    pq.push("the quick");
+    pq.push("fox");
+    pq.push("jumped over");
+    pq.push("the lazy dog");
+    while(!pq.empty()){
+        cout<< pq.top() <<endl;
+        pq.pop();
+    }
+    return 0;
+}
