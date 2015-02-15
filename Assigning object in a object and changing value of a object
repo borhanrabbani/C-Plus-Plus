@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+class classA{
+public:
+    int a,b;
+    void add_AB(void){
+        cout<<"A+B="<<a+b<<'\n';
+    }
+};
+int main(){
+    classA a1,a2; //Declaring two objects
+    a1.a=5;       //Assigning value for a1
+    a1.b=5;       //Assigning value for a1
+    a2=a1;        //Assigning a1 to a2
+    a1.a=10;      //changing value for a of a1, here a of a2 will not change
+    a1.add_AB();  //printing a+b of a1
+    a2.add_AB();  //printing a+b of a2
+}
