@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+class stringlength{
+public:
+    char *p;
+    void print(void){
+        cout<<"\t"<<p<<"\t Length is:"<<strlen(p)<<'\n';
+    }
+    stringlength(){
+        p=new char[50];
+    }
+};
+
+int main(void){
+    stringlength str1,str2;
+
+    strcpy(str1.p,"string1 is: Hello how are you?");
+    strcpy(str2.p,"string2 is: I am not fine.");
+    cout<<"Before Assigning:\n";
+    str1.print();
+    str2.print();
+    str2=str1;
+    strcpy(str1.p,"This string assigned to STR1");
+    cout<<"\nAfter assigning:\n";
+    str1.print();
+    str2.print();
+}
